@@ -1,0 +1,295 @@
+/* header layouts */
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo {
+    padding-top: 0.3em;
+    margin-left: 1em;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    gap: 1.5em;
+    margin-left: 3em;
+}
+
+.links-arrow {
+    display: flex;
+    gap: 0.2em;
+    cursor: pointer;
+}
+
+.links-arrow img {
+    width: 10px;
+    height: 7px;
+    margin: auto;
+    pointer-events: none;
+}
+
+.links-arrow p {
+    pointer-events: none;
+}
+
+.arrow.active {
+    transform: rotate(180deg);
+}
+
+/* dropDown */
+
+.nav-dropdown-container {
+    display: none;
+}
+
+.nav-dropdown-container.active {
+    display: block;
+    box-shadow: 0px 0px 17px -11px rgba(0,0,0,1);
+    background-color: white;
+    position: absolute;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.nav-dropdown-content {
+    display: flex;
+    gap: 0.5em;
+    margin: 0.7em 0;
+
+}
+
+#features-dropdown {
+    top: 2.6em;
+    left: -3.3em;
+}
+
+#company-dropdown {
+    top: 2.6em;
+    left: 6.8em;
+    padding: 1em;
+}
+
+.company-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+/* dropDown typo */
+
+.nav-dropdown-container a {
+    text-decoration: none;
+    color: hsl(0, 5%, 70%);
+}
+
+/* dropDown */
+
+
+/* login register */
+
+.login-register {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-left: auto;
+}
+
+.login-register button {
+    background-color: hsl(0, 0%, 98%);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 5%, 70%);
+}
+
+header button:hover,
+.login-register-modal button:hover {
+    border: 2px solid hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 8%);
+}
+
+/* login register */
+
+/* burger and dialog */
+
+#nav-dialog {
+    position: fixed;
+    width: 70%;
+    min-height: 100vh;
+    margin-left: auto;
+    border: none;
+    animation: 0.1s slide ease-out;
+    animation-fill-mode: forwards;
+}
+
+.secondary-nav {
+    padding: 1em;
+}
+
+#close {
+    width: 5%;
+    margin: 1em 1.7em 0 auto ;
+    cursor: pointer;
+}
+
+.secondary-nav-list-container {
+    height: 15px;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.secondary-nav-list-container.active {
+    height: auto;
+}
+
+.secondary-nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.for-arrow {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+img.active {
+    transform: rotate(180deg);
+}
+
+.dropdown-container {
+    padding: 1em 2em 0 2em;
+}
+
+.dropdown-list {
+    display: flex;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+
+.login-register-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-left: 0;
+}
+
+.login-register-modal button {
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 5%, 70%);
+}
+
+/* typo */
+
+.for-arrow p,
+.for-arrow img {
+    pointer-events: none;
+}
+
+
+.for-arrow p{
+    color: hsl(0, 5%, 70%);
+    cursor: pointer;
+}
+
+.dropdown-list p,
+.dropdown-list a,
+.for-arrow a,
+.not-arrow a {
+    text-decoration: none;
+    color: hsl(0, 5%, 70%);
+}
+
+.dropdown-list p:hover,
+.dropdown-list a:hover,
+.for-arrow:hover p,
+.not-arrow a:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.dropdown-list a:focus {
+    outline: none;
+}
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 738px) {
+    .burger {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+    }
+    
+    .login-register {
+        display: none;
+    }
+    
+}
+
+/* burger and dialog */
+
+
+/* header typo */
+
+header a:hover,
+header p:hover,
+.links-arrow:hover p,
+.login-register-modal p:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.links-arrow a,
+.links-arrow p {
+    text-decoration: none;
+    color: hsl(0, 5%, 70%);
+}
+
+.login-register p,
+.login-register-modal p {
+    color: hsl(0, 5%, 70%);
+    cursor: pointer;
+}
+
+.login-register button,
+.login-register-modal button {
+    color: hsl(0, 5%, 70%);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* header layouts */
+
+
+@keyframes slide {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
